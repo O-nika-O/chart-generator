@@ -1,15 +1,16 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route} from 'react-router-dom';
-import Home from './Home.js';
-import List from './List.js';
-import Error from './Error.js'
+import ChartGenerator from './ChartGenerator.js'
+import Error from './Error.js';
+import ChartListing from './ChartListing.js';
 
 function App() {
     return (
         <BrowserRouter>
             <Routes>
-                <Route exact path='/' element={<Home />} />
-                <Route path='/chartlisting' element={<List />} />
+                <Route exact path='/' element={<ChartGenerator />} />
+                <Route path='/chartlisting' element={<ChartListing />}>
+                </Route>
                 <Route path='*' element={<Error/>} />
             </Routes>
         </BrowserRouter>

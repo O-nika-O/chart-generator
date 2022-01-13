@@ -28,7 +28,8 @@ router.get('/:chartId', (req, res) => {
     chartModel.findOne({
         _id: req.params.chartId
     }, (err, doc) => {
-                if(err) {
+        
+        if(err) {
             console.log("ERROR: " + err);
             res.status(500).json({
                 message: "An error ocurred while reading the data",
